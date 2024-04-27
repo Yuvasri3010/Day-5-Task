@@ -1,0 +1,198 @@
+1.Create your own resume data in JSON format.json
+
+{
+  "name": "Alice Smith",
+  "contact": {
+    "email": "alice.smith@example.com",
+    "phone": "+1234567890",
+    "address": "456 Elm Street, City, Country"
+  },
+  "summary": "Dedicated and detail-oriented software developer with a strong background in full-stack web development. Passionate about learning new technologies and solving complex problems.",
+  "education": [
+    {
+      "degree": "Bachelor of Engineering in Computer Science",
+      "institution": "University of ABC",
+      "location": "City, Country",
+      "year": "2017-2021"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Full-stack Developer",
+      "company": "Tech Innovations Ltd.",
+      "location": "City, Country",
+      "dates": "2021-present",
+      "responsibilities": [
+        "Developing scalable web applications using Angular and Node.js.",
+        "Designing and implementing RESTful APIs for various projects.",
+        "Collaborating with UX/UI designers to create intuitive user interfaces.",
+        "Conducting code reviews and providing constructive feedback to team members."
+      ]
+    },
+    {
+      "title": "Software Engineer Intern",
+      "company": "XYZ Tech Solutions",
+      "location": "City, Country",
+      "dates": "Summer 2020",
+      "responsibilities": [
+        "Assisted in the development of a mobile application using React Native.",
+        "Participated in daily stand-up meetings and sprint planning sessions.",
+        "Contributed to the design and implementation of database schemas."
+      ]
+    }
+  ],
+  "skills": [
+    "JavaScript",
+    "Angular",
+    "Node.js",
+    "React Native",
+    "HTML5",
+    "CSS3",
+    "Python",
+    "Java",
+    "SQL",
+    "Git",
+    "RESTful APIs",
+    "Agile Development",
+    "Problem Solving"
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "proficiency": "Native"
+    },
+    {
+      "name": "Spanish",
+      "proficiency": "Intermediate"
+    },
+    {
+      "name": "French",
+      "proficiency": "Beginner"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Developer - Associate",
+      "authority": "Amazon Web Services",
+      "date": "2022"
+    },
+    {
+      "name": "Scrum Master",
+      "authority": "Scrum Alliance",
+      "date": "2021"
+    }
+  ]
+}
+
+
+
+2.For the given JSON iterate over all for loops (for,for in,for of,forEach).js
+
+const resume = {
+  "name": "Alice Smith",
+  "contact": {
+    "email": "alice.smith@example.com",
+    "phone": "+1234567890",
+    "address": "456 Elm Street, City, Country"
+  },
+  "summary": "Dedicated and detail-oriented software developer with a strong background in full-stack web development. Passionate about learning new technologies and solving complex problems.",
+  "education": [
+    {
+      "degree": "Bachelor of Engineering in Computer Science",
+      "institution": "University of ABC",
+      "location": "City, Country",
+      "year": "2017-2021"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Full-stack Developer",
+      "company": "Tech Innovations Ltd.",
+      "location": "City, Country",
+      "dates": "2021-present",
+      "responsibilities": [
+        "Developing scalable web applications using Angular and Node.js.",
+        "Designing and implementing RESTful APIs for various projects.",
+        "Collaborating with UX/UI designers to create intuitive user interfaces.",
+        "Conducting code reviews and providing constructive feedback to team members."
+      ]
+    },
+    {
+      "title": "Software Engineer Intern",
+      "company": "XYZ Tech Solutions",
+      "location": "City, Country",
+      "dates": "Summer 2020",
+      "responsibilities": [
+        "Assisted in the development of a mobile application using React Native.",
+        "Participated in daily stand-up meetings and sprint planning sessions.",
+        "Contributed to the design and implementation of database schemas."
+      ]
+    }
+  ],
+  "skills": [
+    "JavaScript",
+    "Angular",
+    "Node.js",
+    "React Native",
+    "HTML5",
+    "CSS3",
+    "Python",
+    "Java",
+    "SQL",
+    "Git",
+    "RESTful APIs",
+    "Agile Development",
+    "Problem Solving"
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "proficiency": "Native"
+    },
+    {
+      "name": "Spanish",
+      "proficiency": "Intermediate"
+    },
+    {
+      "name": "French",
+      "proficiency": "Beginner"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Developer - Associate",
+      "authority": "Amazon Web Services",
+      "date": "2022"
+    },
+    {
+      "name": "Scrum Master",
+      "authority": "Scrum Alliance",
+      "date": "2021"
+    }
+  ]
+};
+
+// Using 'for' loop
+console.log("Using 'for' loop:");
+for (let i = 0; i < resume.education.length; i++) {
+  console.log("Degree:", resume.education[i].degree);
+}
+
+// Using 'for...in' loop
+console.log("\nUsing 'for...in' loop:");
+for (let key in resume.contact) {
+  console.log(key + ":", resume.contact[key]);
+}
+
+// Using 'for...of' loop
+console.log("\nUsing 'for...of' loop:");
+for (let experience of resume.experience) {
+  console.log("Title:", experience.title);
+  console.log("Company:", experience.company);
+}
+
+// Using 'forEach' loop
+console.log("\nUsing 'forEach' loop:");
+resume.skills.forEach(skill => {
+  console.log("Skill:", skill);
+});
